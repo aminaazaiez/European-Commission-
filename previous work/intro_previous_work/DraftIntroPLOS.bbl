@@ -1,0 +1,623 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{beyers2014policy}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c94a060bf326b21d0899700c4e595070}{%
+           family={Beyers},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca02a61059ec8dd71b314b5841e9cff7}{%
+           family={D{ü}r},
+           familyi={D\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7583be8fff7aedfab50af8cd098feb4d}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1ed72c88e230450e4382d9af9212220}{%
+           family={Wonka},
+           familyi={W\bibinitperiod},
+           given={Arndt},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{080be4f51849bb1f340907a99562bacd}
+      \strng{fullhash}{40467c0f3bd63e53d5725d9047f0fb83}
+      \strng{bibnamehash}{080be4f51849bb1f340907a99562bacd}
+      \strng{authorbibnamehash}{080be4f51849bb1f340907a99562bacd}
+      \strng{authornamehash}{080be4f51849bb1f340907a99562bacd}
+      \strng{authorfullhash}{40467c0f3bd63e53d5725d9047f0fb83}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Interest Groups \& Advocacy}
+      \field{number}{2}
+      \field{title}{Policy-centred sampling in interest group research: Lessons from the INTEREURO project}
+      \field{volume}{3}
+      \field{year}{2014}
+      \field{pages}{160\bibrangedash 173}
+      \range{pages}{14}
+    \endentry
+    \entry{bouwen2002corporate}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dc80a5b1ac35cb51fcb073e286fcbe3f}{%
+           family={Bouwen},
+           familyi={B\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{dc80a5b1ac35cb51fcb073e286fcbe3f}
+      \strng{fullhash}{dc80a5b1ac35cb51fcb073e286fcbe3f}
+      \strng{bibnamehash}{dc80a5b1ac35cb51fcb073e286fcbe3f}
+      \strng{authorbibnamehash}{dc80a5b1ac35cb51fcb073e286fcbe3f}
+      \strng{authornamehash}{dc80a5b1ac35cb51fcb073e286fcbe3f}
+      \strng{authorfullhash}{dc80a5b1ac35cb51fcb073e286fcbe3f}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of European public policy}
+      \field{number}{3}
+      \field{title}{Corporate lobbying in the European Union: the logic of access}
+      \field{volume}{9}
+      \field{year}{2002}
+      \field{pages}{365\bibrangedash 390}
+      \range{pages}{26}
+    \endentry
+    \entry{bunea2015quantitative}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1818a474fbc3fe125004c326e7c06828}{%
+           family={Bunea},
+           familyi={B\bibinitperiod},
+           given={Adriana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=67f3139b804ea8239420c73b0e198d17}{%
+           family={Ibenskas},
+           familyi={I\bibinitperiod},
+           given={Raimondas},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{fa7e9c9712dad3cb34ffbd69dd067865}
+      \strng{fullhash}{fa7e9c9712dad3cb34ffbd69dd067865}
+      \strng{bibnamehash}{fa7e9c9712dad3cb34ffbd69dd067865}
+      \strng{authorbibnamehash}{fa7e9c9712dad3cb34ffbd69dd067865}
+      \strng{authornamehash}{fa7e9c9712dad3cb34ffbd69dd067865}
+      \strng{authorfullhash}{fa7e9c9712dad3cb34ffbd69dd067865}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Union Politics}
+      \field{number}{3}
+      \field{title}{Quantitative text analysis and the study of EU lobbying and interest groups}
+      \field{volume}{16}
+      \field{year}{2015}
+      \field{pages}{429\bibrangedash 455}
+      \range{pages}{27}
+    \endentry
+    \entry{coen2009lobbying}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c8b0cf2bc6ef6136a52bb736d7313b88}{%
+           family={Coen},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27e6806a03f45e62edc5f87bcfeed564}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{532845e0329ed8048075309932599565}
+      \strng{fullhash}{532845e0329ed8048075309932599565}
+      \strng{bibnamehash}{532845e0329ed8048075309932599565}
+      \strng{authorbibnamehash}{532845e0329ed8048075309932599565}
+      \strng{authornamehash}{532845e0329ed8048075309932599565}
+      \strng{authorfullhash}{532845e0329ed8048075309932599565}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lobbying the European Union: institutions, actors, and issues}
+      \field{year}{2009}
+    \endentry
+    \entry{de2016pressure}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9d9c2febfe03729f365e2c1799774cf5}{%
+           family={De\bibnamedelima Bruycker},
+           familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Iskander},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{9d9c2febfe03729f365e2c1799774cf5}
+      \strng{fullhash}{9d9c2febfe03729f365e2c1799774cf5}
+      \strng{bibnamehash}{9d9c2febfe03729f365e2c1799774cf5}
+      \strng{authorbibnamehash}{9d9c2febfe03729f365e2c1799774cf5}
+      \strng{authornamehash}{9d9c2febfe03729f365e2c1799774cf5}
+      \strng{authorfullhash}{9d9c2febfe03729f365e2c1799774cf5}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JCMS: Journal of Common Market Studies}
+      \field{number}{3}
+      \field{title}{Pressure and expertise: explaining the information supply of interest groups in EU legislative lobbying}
+      \field{volume}{54}
+      \field{year}{2016}
+      \field{pages}{599\bibrangedash 616}
+      \range{pages}{18}
+    \endentry
+    \entry{dur2008measuring}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ca02a61059ec8dd71b314b5841e9cff7}{%
+           family={D{ü}r},
+           familyi={D\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{ca02a61059ec8dd71b314b5841e9cff7}
+      \strng{fullhash}{ca02a61059ec8dd71b314b5841e9cff7}
+      \strng{bibnamehash}{ca02a61059ec8dd71b314b5841e9cff7}
+      \strng{authorbibnamehash}{ca02a61059ec8dd71b314b5841e9cff7}
+      \strng{authornamehash}{ca02a61059ec8dd71b314b5841e9cff7}
+      \strng{authorfullhash}{ca02a61059ec8dd71b314b5841e9cff7}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Union Politics}
+      \field{number}{4}
+      \field{title}{Measuring interest group influence in the EU: A note on methodology}
+      \field{volume}{9}
+      \field{year}{2008}
+      \field{pages}{559\bibrangedash 576}
+      \range{pages}{18}
+    \endentry
+    \entry{dur2007inclusion}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ca02a61059ec8dd71b314b5841e9cff7}{%
+           family={D{ü}r},
+           familyi={D\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c78d2acfa9775cf52d82bc2493ebe84}{%
+           family={De\bibnamedelima Bi{è}vre},
+           familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{c8cc6f10f339ac7657f927b078965042}
+      \strng{fullhash}{c8cc6f10f339ac7657f927b078965042}
+      \strng{bibnamehash}{c8cc6f10f339ac7657f927b078965042}
+      \strng{authorbibnamehash}{c8cc6f10f339ac7657f927b078965042}
+      \strng{authornamehash}{c8cc6f10f339ac7657f927b078965042}
+      \strng{authorfullhash}{c8cc6f10f339ac7657f927b078965042}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Public Policy}
+      \field{number}{1}
+      \field{title}{Inclusion without influence? NGOs in European trade policy}
+      \field{volume}{27}
+      \field{year}{2007}
+      \field{pages}{79\bibrangedash 101}
+      \range{pages}{23}
+    \endentry
+    \entry{follesdal2006there}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=982fbc4e300ce7829791f6337ab8d0e7}{%
+           family={Follesdal},
+           familyi={F\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=410d33cff748239e4983e4620f43a3c1}{%
+           family={Hix},
+           familyi={H\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{65795a338206eaaf296d0eabd72bb747}
+      \strng{fullhash}{65795a338206eaaf296d0eabd72bb747}
+      \strng{bibnamehash}{65795a338206eaaf296d0eabd72bb747}
+      \strng{authorbibnamehash}{65795a338206eaaf296d0eabd72bb747}
+      \strng{authornamehash}{65795a338206eaaf296d0eabd72bb747}
+      \strng{authorfullhash}{65795a338206eaaf296d0eabd72bb747}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JCMS: Journal of Common Market Studies}
+      \field{number}{3}
+      \field{title}{Why there is a democratic deficit in the EU: A response to Majone and Moravcsik}
+      \field{volume}{44}
+      \field{year}{2006}
+      \field{pages}{533\bibrangedash 562}
+      \range{pages}{30}
+    \endentry
+    \entry{greenwood2013transparency}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=57573093a090e88ec98763a29ad931ff}{%
+           family={Greenwood},
+           familyi={G\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2bdb0f0db81a61eaca1541aab02da951}{%
+           family={Dreger},
+           familyi={D\bibinitperiod},
+           given={Joanna},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{bd600d9f291060823a65245e7ae43192}
+      \strng{fullhash}{bd600d9f291060823a65245e7ae43192}
+      \strng{bibnamehash}{bd600d9f291060823a65245e7ae43192}
+      \strng{authorbibnamehash}{bd600d9f291060823a65245e7ae43192}
+      \strng{authornamehash}{bd600d9f291060823a65245e7ae43192}
+      \strng{authorfullhash}{bd600d9f291060823a65245e7ae43192}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Interest Groups \& Advocacy}
+      \field{number}{2}
+      \field{title}{The Transparency Register: A European vanguard of strong lobby regulation?}
+      \field{volume}{2}
+      \field{year}{2013}
+      \field{pages}{139\bibrangedash 162}
+      \range{pages}{24}
+    \endentry
+    \entry{kluver2009measuring}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e7a84cc855c2b9be5746f893eca4b03d}{%
+           family={Kl{ü}ver},
+           familyi={K\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{fullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{bibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorbibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authornamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorfullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Union Politics}
+      \field{number}{4}
+      \field{title}{Measuring interest group influence using quantitative text analysis}
+      \field{volume}{10}
+      \field{year}{2009}
+      \field{pages}{535\bibrangedash 549}
+      \range{pages}{15}
+    \endentry
+    \entry{kluver2011contextual}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e7a84cc855c2b9be5746f893eca4b03d}{%
+           family={Kl{ü}ver},
+           familyi={K\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{fullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{bibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorbibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authornamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorfullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Union Politics}
+      \field{number}{4}
+      \field{title}{The contextual nature of lobbying: Explaining lobbying success in the European Union}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{483\bibrangedash 506}
+      \range{pages}{24}
+    \endentry
+    \entry{kluver2013lobbying}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e7a84cc855c2b9be5746f893eca4b03d}{%
+           family={Kl{ü}ver},
+           familyi={K\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{fullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{bibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorbibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authornamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorfullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lobbying in the European Union: interest groups, lobbying coalitions, and policy change}
+      \field{year}{2013}
+    \endentry
+    \entry{kluver2015promises}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e7a84cc855c2b9be5746f893eca4b03d}{%
+           family={Kl{ü}ver},
+           familyi={K\bibinitperiod},
+           given={Heike},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{fullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{bibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorbibnamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authornamehash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \strng{authorfullhash}{e7a84cc855c2b9be5746f893eca4b03d}
+      \field{extraname}{4}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Union Politics}
+      \field{number}{3}
+      \field{title}{The promises of quantitative text analysis in interest group research: A reply to Bunea and Ibenskas}
+      \field{volume}{16}
+      \field{year}{2015}
+      \field{pages}{456\bibrangedash 466}
+      \range{pages}{11}
+    \endentry
+    \entry{kohler2007institutional}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=47e7d9402982b9624086367c7c9c2a30}{%
+           family={Kohler-Koch},
+           familyi={K\bibinithyphendelim K\bibinitperiod},
+           given={Beate},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=993d5fc8bb3677603242f7cbd8dae242}{%
+           family={Finke},
+           familyi={F\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{ceccbda83aea4e34ffee162758fd5e63}
+      \strng{fullhash}{ceccbda83aea4e34ffee162758fd5e63}
+      \strng{bibnamehash}{ceccbda83aea4e34ffee162758fd5e63}
+      \strng{authorbibnamehash}{ceccbda83aea4e34ffee162758fd5e63}
+      \strng{authornamehash}{ceccbda83aea4e34ffee162758fd5e63}
+      \strng{authorfullhash}{ceccbda83aea4e34ffee162758fd5e63}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Civil Society}
+      \field{number}{3}
+      \field{title}{The institutional shaping of EU--society relations: a contribution to democracy via participation?}
+      \field{volume}{3}
+      \field{year}{2007}
+      \field{pages}{205\bibrangedash 221}
+      \range{pages}{17}
+    \endentry
+    \entry{mahoney2007lobbying}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acf196d2cfe45094874cd1535253927f}{%
+           family={Mahoney},
+           familyi={M\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{acf196d2cfe45094874cd1535253927f}
+      \strng{fullhash}{acf196d2cfe45094874cd1535253927f}
+      \strng{bibnamehash}{acf196d2cfe45094874cd1535253927f}
+      \strng{authorbibnamehash}{acf196d2cfe45094874cd1535253927f}
+      \strng{authornamehash}{acf196d2cfe45094874cd1535253927f}
+      \strng{authorfullhash}{acf196d2cfe45094874cd1535253927f}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Public Policy}
+      \field{number}{1}
+      \field{title}{Lobbying success in the United States and the European Union}
+      \field{volume}{27}
+      \field{year}{2007}
+      \field{pages}{35\bibrangedash 56}
+      \range{pages}{22}
+    \endentry
+    \entry{pappi1999organization}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d639189530ab0ad46d4b315d457f11db}{%
+           family={Pappi},
+           familyi={P\bibinitperiod},
+           given={Franz\bibnamedelima U},
+           giveni={F\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c76dd38373fd95f913add18356f3486}{%
+           family={Henning},
+           familyi={H\bibinitperiod},
+           given={Christian\bibnamedelima HCA},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{fullhash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{bibnamehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{authorbibnamehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{authornamehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{authorfullhash}{976ac907b156a5b1b2fa302d08654762}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Journal of Political Research}
+      \field{number}{2}
+      \field{title}{The organization of influence on the EC's common agriculturalpolicy: A network approach}
+      \field{volume}{36}
+      \field{year}{1999}
+      \field{pages}{257\bibrangedash 281}
+      \range{pages}{25}
+    \endentry
+    \entry{schmidt2013democracy}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1b296db390515e74bf697e8c8203cf79}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Vivien\bibnamedelima A},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{1b296db390515e74bf697e8c8203cf79}
+      \strng{fullhash}{1b296db390515e74bf697e8c8203cf79}
+      \strng{bibnamehash}{1b296db390515e74bf697e8c8203cf79}
+      \strng{authorbibnamehash}{1b296db390515e74bf697e8c8203cf79}
+      \strng{authornamehash}{1b296db390515e74bf697e8c8203cf79}
+      \strng{authorfullhash}{1b296db390515e74bf697e8c8203cf79}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Political Studies}
+      \field{number}{1}
+      \field{title}{Democracy and legitimacy in the European Union revisited: Input, output and ÔthroughputÕ}
+      \field{volume}{61}
+      \field{year}{2013}
+      \field{pages}{2\bibrangedash 22}
+      \range{pages}{21}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'DraftIntroPLOS.blg'
+[56] biber:322> INFO - === ven. mai 12, 2023, 10:14:37
+[66] Biber.pm:415> INFO - Reading 'DraftIntroPLOS.bcf'
+[113] Biber.pm:943> INFO - Found 17 citekeys in bib section 0
+[123] Biber.pm:4256> INFO - Processing section 0
+[123] Utils.pm:75> INFO - Globbing data source 'biblio.bib'
+[123] Utils.pm:91> INFO - Globbed data source 'biblio.bib' to biblio.bib
+[130] Biber.pm:4455> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[131] bibtex.pm:1653> INFO - LaTeX decoding ...
+[147] bibtex.pm:1471> INFO - Found BibTeX data source 'biblio.bib'
+[228] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[228] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[228] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[228] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[239] bbl.pm:652> INFO - Writing 'DraftIntroPLOS.bbl' with encoding 'UTF-8'
+[246] bbl.pm:755> INFO - Output to DraftIntroPLOS.bbl
