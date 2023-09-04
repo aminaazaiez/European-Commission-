@@ -6,7 +6,7 @@
 import scrapy
 
 
-class EuropeanCommissionItem(scrapy.Item):
+class CabinetMemberItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

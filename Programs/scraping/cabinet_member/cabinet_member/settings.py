@@ -1,4 +1,4 @@
-# Scrapy settings for european_commission project
+# Scrapy settings for cabinet_member project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,15 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "european_commission"
+BOT_NAME = "cabinet_member"
 
-SPIDER_MODULES = ["european_commission.spiders"]
-NEWSPIDER_MODULE = "european_commission.spiders"
+SPIDER_MODULES = ["cabinet_member.spiders"]
+NEWSPIDER_MODULE = "cabinet_member.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0'
-
+#USER_AGENT = "cabinet_member (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -38,21 +37,21 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-DEFAULT_REQUEST_HEADERS = {
-    'Accept-Language': 'en-US,en;q=0.9',
-    'Referer': 'https://www.google.com/',
-}
+#DEFAULT_REQUEST_HEADERS = {
+#    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+#    "Accept-Language": "en",
+#}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "european_commission.middlewares.EuropeanCommissionSpiderMiddleware": 543,
+#    "cabinet_member.middlewares.CabinetMemberSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "european_commission.middlewares.EuropeanCommissionDownloaderMiddleware": 543,
+#    "cabinet_member.middlewares.CabinetMemberDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -64,7 +63,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "european_commission.pipelines.EuropeanCommissionPipeline": 300,
+#    "cabinet_member.pipelines.CabinetMemberPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
