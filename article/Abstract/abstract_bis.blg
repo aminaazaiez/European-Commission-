@@ -1,0 +1,31 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'abstract_bis.blg'
+[64] biber:340> INFO - === jeu. nov. 30, 2023, 13:05:43
+[77] Biber.pm:418> INFO - Reading 'abstract_bis.bcf'
+[138] Biber.pm:972> INFO - Found 11 citekeys in bib section 0
+[151] Biber.pm:4383> INFO - Processing section 0
+[160] Biber.pm:4574> INFO - Looking for bibtex file 'Associations_and_politics.bib' for section 0
+[164] bibtex.pm:1713> INFO - LaTeX decoding ...
+[222] bibtex.pm:1518> INFO - Found BibTeX data source 'Associations_and_politics.bib'
+[263] Biber.pm:4574> INFO - Looking for bibtex file 'Networks_Theory.bib' for section 0
+[266] bibtex.pm:1713> INFO - LaTeX decoding ...
+[292] bibtex.pm:1518> INFO - Found BibTeX data source 'Networks_Theory.bib'
+[294] Biber.pm:4574> INFO - Looking for bibtex file 'biblio_opinion_dynamics.bib' for section 0
+[300] bibtex.pm:1713> INFO - LaTeX decoding ...
+[392] bibtex.pm:1518> INFO - Found BibTeX data source 'biblio_opinion_dynamics.bib'
+[400] Biber.pm:4574> INFO - Looking for bibtex file 'Lobbying.bib' for section 0
+[401] bibtex.pm:1713> INFO - LaTeX decoding ...
+[410] bibtex.pm:1518> INFO - Found BibTeX data source 'Lobbying.bib'
+[426] Biber.pm:4574> INFO - Looking for bibtex file 'additional.bib' for section 0
+[427] bibtex.pm:1713> INFO - LaTeX decoding ...
+[432] bibtex.pm:1518> INFO - Found BibTeX data source 'additional.bib'
+[468] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[468] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[468] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[468] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[482] bbl.pm:654> INFO - Writing 'abstract_bis.bbl' with encoding 'UTF-8'
+[487] bbl.pm:757> INFO - Output to abstract_bis.bbl
+[487] Biber.pm:130> WARN - Duplicate entry key: 'granovetter_strength_1973' in file 'biblio_opinion_dynamics.bib', skipping ...
+[488] Biber.pm:130> WARN - Duplicate entry key: 'tudisco_node_2021' in file 'biblio_opinion_dynamics.bib', skipping ...
+[488] Biber.pm:130> WARN - ISBN '978-0-19-879705-0 978-0-19-879706-7' in entry 'schmidt_europes_2020' is invalid - run biber with '--validate_datamodel' for details.
+[488] Biber.pm:132> INFO - WARNINGS: 3

@@ -1,0 +1,28 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'abstract.blg'
+[141] biber:340> INFO - === dim. oct. 15, 2023, 09:20:13
+[183] Biber.pm:418> INFO - Reading 'abstract.bcf'
+[318] Biber.pm:972> INFO - Found 6 citekeys in bib section 0
+[353] Biber.pm:4383> INFO - Processing section 0
+[378] Biber.pm:4574> INFO - Looking for bibtex file 'Associations_and_politics.bib' for section 0
+[388] bibtex.pm:1713> INFO - LaTeX decoding ...
+[499] bibtex.pm:1518> INFO - Found BibTeX data source 'Associations_and_politics.bib'
+[568] Biber.pm:4574> INFO - Looking for bibtex file 'Networks_Theory.bib' for section 0
+[576] bibtex.pm:1713> INFO - LaTeX decoding ...
+[647] bibtex.pm:1518> INFO - Found BibTeX data source 'Networks_Theory.bib'
+[650] Biber.pm:4574> INFO - Looking for bibtex file 'biblio_opinion_dynamics.bib' for section 0
+[661] bibtex.pm:1713> INFO - LaTeX decoding ...
+[914] bibtex.pm:1518> INFO - Found BibTeX data source 'biblio_opinion_dynamics.bib'
+[926] Biber.pm:4574> INFO - Looking for bibtex file 'Lobbying.bib' for section 0
+[927] bibtex.pm:1713> INFO - LaTeX decoding ...
+[941] bibtex.pm:1518> INFO - Found BibTeX data source 'Lobbying.bib'
+[991] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[991] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[991] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[991] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[1005] bbl.pm:654> INFO - Writing 'abstract.bbl' with encoding 'UTF-8'
+[1011] bbl.pm:757> INFO - Output to abstract.bbl
+[1011] Biber.pm:130> WARN - Duplicate entry key: 'granovetter_strength_1973' in file 'biblio_opinion_dynamics.bib', skipping ...
+[1011] Biber.pm:130> WARN - Duplicate entry key: 'tudisco_node_2021' in file 'biblio_opinion_dynamics.bib', skipping ...
+[1011] Biber.pm:130> WARN - ISBN '978-0-19-879705-0 978-0-19-879706-7' in entry 'schmidt_europes_2020' is invalid - run biber with '--validate_datamodel' for details.
+[1011] Biber.pm:132> INFO - WARNINGS: 3

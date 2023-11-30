@@ -1,0 +1,2 @@
+Export issue : well displayed company data in the orbis web site are not exported.
+Solved : Copypaste the htlm code for the table of company data in a file. Export company data give an excel file with company names. open the htlm file in a browser, select all, copy and paste iin the excel file.

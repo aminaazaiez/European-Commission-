@@ -1,0 +1,82 @@
+\documentclass[ 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=160mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs,	longtable, makecell}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{soul}
+\usepackage{array,multirow,makecell}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+
+\usepackage[style = authoryear, url=false]{biblatex}
+\addbibresource{Associations_and_politics.bib}
+\addbibresource{Networks_Theory.bib}
+\addbibresource{biblio_opinion_dynamics.bib}
+
+\usepackage{authblk}
+\author[1]{Amina Azaiez}
+\affil[1]{Université Paris 1 Panthéon-Sorbonne, Centre
+d’économie de la Sorbonne, Maison des sciences économiques}
+
+
+\title{Lobbying in the European Commission, a hypergraph analysis }
+
+\begin{document}
+\maketitle
+
+When assessing the legitimacy of the European Union (EU), political scientists have traditionally focused on two main dimensions: input and output legitimacy. 
+
+Input legitimacy involves evaluating the responsiveness to citizen concerns as a result of participation, while output legitimacy 
+is judged in terms of effectiveness of the EU's policy outcomes (smidth 2010). However, there has been comparatively less scrutiny of the decision-making processes within EU institutions.
+Among the various political bodies comprising this institutional framework, the European Commission (EC) plays a crucial role in ensuring throughput legitimacy, functioning as a political platform for 'associative democracy' and governance that engages with the public.
+Public consultations and stakeholder inclusion in the policy-making process are often advocated as supplementary mechanisms for democratic legitimization, addressing the limitations of electoral-based legitimacy.
+Nonetheless, the engagement with interest groups must align with specific performance criteria outlined in the Treaty on the European Union. These criteria encompass accountability, transparency, efficiency, openness, and inclusiveness (Schmidt, 2010). \\
+In this paper, our primary focus will be on the last criteria. Inclusiveness encourages the consideration of a diverse range of perspectives, ensuring a balance and fairness in their representation  (Smidth 2020, EU better regulation, treaty on EU). \\
+
+The EC conducts both public and targeted consultations in the process of implementing laws. These consultations are predominantly facilitated through the 'Have Your Say' web portal, where stakeholders are invited to respond to the 'call for evidence' initiated by the European Commission. Less frequently, specific audiences are invited to participate in meetings with EU representatives. Given that face-to-face meetings can potentially exert significant influence on policy outcomes, our study delves into the network of interactions between commissioners, their cabinet members, and directorate generals with various organizations.\\
+
+Now, the fundamental question we aim to address is whether the principles of openness and inclusiveness continue to be upheld, especially when high levels of influence are involved. To tackle this, we initially examine the overarching structure of the network and assess the positions of different social groups, categorized by country, organization type, and sectors.
+
+Subsequently, our analysis narrows down to companies and groups, where we compare their size to their centrality within the network, with the aim of identifying any over-represented entities. For our research, we draw upon data from the Transparency Register of the EU and the Orbis dataset.\\
+
+Meeting data is accessible through the EC members' website. 
+We compile information on meetings held by commissioners, cabinet members, and directorate generals since the beginning of the current commission's term, which started on December 1, 2019.
+We represent these meetings using a hypergraph denoted as $\mathcal{H}(V, E, w)$. In this hypergraph, $V$ comprises the set of vertices, corresponding to both EU members and organizations, while $E$ consists of hyperedges, each of which represents a specific meeting. The weight $w_e$ is associated with each hyperedge $e$ and corresponds to the aggregated sum of occurrences of $e$ over time.
+Our resulting hypergraph features $|V| = 4868$ nodes, $|E| = 13331$ edges, and a total of $\sum_e w_e = 16870$ distinct meetings. The hypergraph has a diameter of 7.
+The average size of hyperedges $e$ is $2.74$ with a standard deviation of $2.05$. 
+Although the number of large  hyperedges is limited, they play a crucial role in the overall connectivity of the hypergraph, as demonstrated by the substantial correlation between betweenness centrality and the size of hyperedges, which stands at $0.73$.  \\
+
+We define the strength of a node $i$ as $s_i = \sum_{e: i \in e} w_e$ and the mean meeting size attended by node $i$ as $t_i = \frac{\sum_{e: i \in e} w_e |e]}{\sum_{e: i \in e} w_e }$. 
+Figure \ref{fig: t_i vs s_i} displays the relation between these two measures. As we can see, there is no correlation (-0.01) between the two, but we can distinguish different regions in the graph.
+First, there are organisations with a low $s_i <10$ and large $t_i>10$.
+These nodes correspond to organizations that have been rarely targeted by the EC and when they do have a meeting, they are invited to participate in large meetings. 
+On the other hand, organizations with a high $s_i>10$ have a relatively low $t_i$ which means that there are usually invited in small sized meetings. 
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{/home/azaiez/Documents/Cours/These/European Commission/Programs/Figures/t_i vs s_i.pdf}
+	\caption{•}
+	\label{fig: t_i vs s_i}
+\end{figure}
+
+Moreover, we compute the average strength grouped by category of registration in the transparency register.
+We find that business interest represented by 'trade and business associations' and 'companies and groups' have on average a highest strength ($\overline{s_i}  = 6.75 $ and $\sigma_{s_i} = 12.62$) than the other categories ( $\overline{s_i}  = 5.23$ and $\sigma_{s_i} = 10.13$) represented by NGOs,  Professional consultancies, Academic institutions, Think tanks and research institutions, Associations and networks of public authorities, etc. 
+This unequal representation is even more pronounced when we look at the tail of the distribution $s_i$.
+As it is shown in Figure \ref{fig: t_i vs s_i}, among organizations with $s_i >50$, organizations representing business interest $(28)$ are twice as many as the others $(14)$. 
+
+
+
+
+
+    \newpage
+    \printbibliography
+   
+\end{document}

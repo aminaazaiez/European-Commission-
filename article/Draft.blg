@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[0] Config.pm:307> INFO - Logfile is 'Draft.blg'
-[75] biber:322> INFO - === ven. juin 23, 2023, 08:36:39
-[104] Utils.pm:309> ERROR - Cannot find 'Draft.bcf'!
-[104] Biber.pm:132> INFO - ERRORS: 1

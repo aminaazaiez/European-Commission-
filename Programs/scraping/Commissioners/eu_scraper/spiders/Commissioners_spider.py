@@ -17,8 +17,8 @@ def _get_eu_member_name(file_name : str):
             start = i+1
         if world == 'with':
             stop = i
-    Commissioner = " ".join(file_name.split(' ')[start:stop])
-    return(Commissioner)
+    EU_member = " ".join(file_name.split(' ')[start:stop])
+    return(EU_member)
 
 # # Initialize a list to store items
 # items = []

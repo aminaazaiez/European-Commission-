@@ -1,0 +1,320 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{noah_efriedkin_social_1998}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dee84a389501f0bd45986ce251f25d6e}{%
+           family={E.Friedkin},
+           familyi={E\bibinitperiod},
+           given={Noah},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dee84a389501f0bd45986ce251f25d6e}
+      \strng{fullhash}{dee84a389501f0bd45986ce251f25d6e}
+      \strng{bibnamehash}{dee84a389501f0bd45986ce251f25d6e}
+      \strng{authorbibnamehash}{dee84a389501f0bd45986ce251f25d6e}
+      \strng{authornamehash}{dee84a389501f0bd45986ce251f25d6e}
+      \strng{authorfullhash}{dee84a389501f0bd45986ce251f25d6e}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book addresses a phenomenon that has been much studied in an- thropology, sociology, and administrative science - the social structural foundations of coordinated activity and consensus in complexly differ- entiated communities and organizations. Such foundations are important because social differentiation makes coordination and agreement espe- cially hard to achieve and maintain. Noah Friedkin examines the process of social influence and how this process, when it is played out in a network of interpersonal influence, may result in interpersonal agree- ments among actors who are located in different parts of a complexly differentiated organization. This work builds on structural role analysis, which provides a description of the pattern of social differentiation in a population. Interpreting the revealed social structures has long been a problem. Friedkin proposes new steps for structural analysis to deal with this problem. To explain the coordination of social positions, the author seeks to develop a structural social psychology that attends to both social structure and process.}
+      \field{title}{Social Influence Network Theory}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2021}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Noah E. Friedkin - A Structural Theory of Social Influence (Structural Analysis in the Social Sciences) (2006) .pdf:/home/azaiez/Zotero/storage/B6AUW68L/Noah E. Friedkin - A Structural Theory of Social Influence (Structural Analysis in the Social Sciences) (2006) .pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/books/social-influence-network-theory/2602561B361D1ABF985E712B14392D2C
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/books/social-influence-network-theory/2602561B361D1ABF985E712B14392D2C
+      \endverb
+    \endentry
+    \entry{heinz_hollow_1997}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=595c3f895fc2cc3e7e01746c7470a0ae}{%
+           family={Heinz},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bfa87530c79102e7e5cb11e4c7ff864}{%
+           family={Laumann},
+           familyi={L\bibinitperiod},
+           given={Edward\bibnamedelima O.},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81e7d352d063dac50e0a3633f70353c6}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Robert\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3be0eaea87877b25bc90a3b9cf3dc949}{%
+           family={Salisbury},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, {MA}}%
+      }
+      \list{publisher}{1}{%
+        {Harvard University Press}%
+      }
+      \strng{namehash}{8c05a3ae8e556684ad762b85d81fe91f}
+      \strng{fullhash}{36dc14cd88d3dc602f4c52856e007673}
+      \strng{bibnamehash}{8c05a3ae8e556684ad762b85d81fe91f}
+      \strng{authorbibnamehash}{8c05a3ae8e556684ad762b85d81fe91f}
+      \strng{authornamehash}{8c05a3ae8e556684ad762b85d81fe91f}
+      \strng{authorfullhash}{36dc14cd88d3dc602f4c52856e007673}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Critics of the policy-making process argue that private interest groups exert too much influence on the decisions of government, but only rarely has this proposition been examined systematically. The Hollow Core draws on interviews with more than 300 interest groups, 800 lobbyists, and 300 government officials to assess the efforts of private organizations to influence federal policy in four areas—agriculture, energy, health, and labor policy.}
+      \field{day}{15}
+      \field{isbn}{978-0-674-40526-4}
+      \field{month}{9}
+      \field{pagetotal}{448}
+      \field{shorttitle}{The Hollow Core}
+      \field{title}{The Hollow Core: Private Interests in National Policy Making}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/azaiez/Zotero/storage/3RRYCN8G/catalog.html:text/html
+      \endverb
+      \keyw{A- to read,+,C- Association,D- Political Science,E- Case Study,C - Politics,C- Policy Making}
+    \endentry
+    \entry{pappi_organization_1999}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d639189530ab0ad46d4b315d457f11db}{%
+           family={Pappi},
+           familyi={P\bibinitperiod},
+           given={Franz\bibnamedelima U.},
+           giveni={F\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c76dd38373fd95f913add18356f3486}{%
+           family={Henning},
+           familyi={H\bibinitperiod},
+           given={Christian\bibnamedelima H.C.A.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{fullhash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{bibnamehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{authorbibnamehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{authornamehash}{976ac907b156a5b1b2fa302d08654762}
+      \strng{authorfullhash}{976ac907b156a5b1b2fa302d08654762}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The common agricultural policy of the {EC} with its market regulations is decided at {EC} level by a multilevel system of government, in which the Commission and the parliamentary parties of the European Parliament play the supranational role and the national ministries of agriculture act as parts of the intergovernmental system of the Council of Ministers. National interest groups have thereby three major access routes to the {EC} system, ﬁrst through their national governments, or second indirectly, transmitted by their European peak organizations, or third directly to the supranational {EC} actors. The network approach is applied to study empirically the densities of access through these various routes. The links between actors in the agricultural policy domain are conceptualized as links for the exchange of resources, the most important resource of a policy domain being the ﬁnal control of policy decisions. The political actors of the governance system originally hold full control of this valuable resource which they exchange for inﬂuence resources possessed by the interest groups, as public support or expert knowledge. Empirically, answers to the network questions depend on the type of resource and the viewpoint of the interviewed actors. An index is developed which indicates the resource ﬂows between actors and the distribution of equilibrium control of policy decisions. It is shown that the national ministers of agriculture depend very much on the support and expertise of their national farmers’ lobby, whereas the Commission relies more on contacts within the political sector itself. Multilevel systems need a lot of political coordination, so that the political actors within such systems, especially at the supranational level, seem to deal ﬁrst of all with each other and not so much with the demand side of politics, compared to the national ministers of agriculture.}
+      \field{issn}{0304-4130, 1475-6765}
+      \field{journaltitle}{European Journal of Political Research}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{2}
+      \field{shortjournal}{Eur J Political Res}
+      \field{shorttitle}{The organization of influence on the {EC}'s common agriculturalpolicy}
+      \field{title}{The organization of influence on the {EC}'s common agriculturalpolicy: A network approach}
+      \field{urlday}{13}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{volume}{36}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{257\bibrangedash 281}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1111/1475-6765.00470
+      \endverb
+      \verb{file}
+      \verb Pappi and Henning - 1999 - The organization of influence on the EC's common a.pdf:/home/azaiez/Zotero/storage/YVXDL7DV/Pappi and Henning - 1999 - The organization of influence on the EC's common a.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/10.1111/1475-6765.00470
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/10.1111/1475-6765.00470
+      \endverb
+    \endentry
+    \entry{schmidt_europes_2020}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc17e24e1863dd4c1c48394fafc49bb2}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Vivien\bibnamedelima Ann},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{fc17e24e1863dd4c1c48394fafc49bb2}
+      \strng{fullhash}{fc17e24e1863dd4c1c48394fafc49bb2}
+      \strng{bibnamehash}{fc17e24e1863dd4c1c48394fafc49bb2}
+      \strng{authorbibnamehash}{fc17e24e1863dd4c1c48394fafc49bb2}
+      \strng{authornamehash}{fc17e24e1863dd4c1c48394fafc49bb2}
+      \strng{authorfullhash}{fc17e24e1863dd4c1c48394fafc49bb2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{First edition}
+      \field{isbn}{978-0-19-879705-0 978-0-19-879706-7}
+      \field{langid}{english}
+      \field{pagetotal}{358}
+      \field{shorttitle}{Europe's crisis of legitimacy}
+      \field{title}{Europe's crisis of legitimacy: governing by rules and ruling by numbers in the Eurozone}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Schmidt - 2020 - Europe's crisis of legitimacy governing by rules .pdf:/home/azaiez/Zotero/storage/MRRGKC5A/Schmidt - 2020 - Europe's crisis of legitimacy governing by rules .pdf:application/pdf
+      \endverb
+      \keyw{D- Political Science,E- Theory,A- reading,C - Politics,C- Legitimacy,C- {EU}}
+    \endentry
+    \entry{thomas_democratic_2009}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f3390304fa6601db0431b36dec81ad03}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Jensen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f3390304fa6601db0431b36dec81ad03}
+      \strng{fullhash}{f3390304fa6601db0431b36dec81ad03}
+      \strng{bibnamehash}{f3390304fa6601db0431b36dec81ad03}
+      \strng{authorbibnamehash}{f3390304fa6601db0431b36dec81ad03}
+      \strng{authornamehash}{f3390304fa6601db0431b36dec81ad03}
+      \strng{authorfullhash}{f3390304fa6601db0431b36dec81ad03}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The {EU}, as the most developed international organization, provides a laboratory for observing the development of democratic structures outside its member-states. The democratic deficit debate thus has implications that reach beyond the {EU} and touch upon crucial issues of future developments within democratic theory. This review distinguishes between three different types of legitimacy, namely procedural, efficiency and social legitimacy, and authors are discussed according to which type of legitimacy that underlines their analysis of the democratic deficit. Most authors invoke one type of legitimacy as their basis, but a new strand is emerging that mixes different types of legitimacy when establishing normative criteria for the {EU}. It is concluded that, in order to further the debate, this new strand has potential to develop advanced normative models appropriate for democracy beyond the nation-state.}
+      \field{day}{1}
+      \field{journaltitle}{Living Reviews in Democracy}
+      \field{month}{1}
+      \field{shortjournal}{Living Reviews in Democracy}
+      \field{title}{The Democratic Deficit of the European Union}
+      \field{volume}{1}
+      \field{year}{2009}
+      \field{dateera}{ce}
+    \endentry
+    \entry{zeng_multiplex_2016}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9239870e5ecfd48b40a2633d78f9e123}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={An},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e16a33f0b88b28bf78bd9d1d94a27c82}{%
+           family={Battiston},
+           familyi={B\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=bfb07867b83e7cc6b9240de083c0b803}{%
+           family={Sendiña-Nadal},
+           familyi={S\bibinithyphendelim N\bibinitperiod},
+           given={Irene},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec0901e435c2017c32eef5c6d303157f}
+      \strng{fullhash}{ec0901e435c2017c32eef5c6d303157f}
+      \strng{bibnamehash}{ec0901e435c2017c32eef5c6d303157f}
+      \strng{authorbibnamehash}{ec0901e435c2017c32eef5c6d303157f}
+      \strng{authornamehash}{ec0901e435c2017c32eef5c6d303157f}
+      \strng{authorfullhash}{ec0901e435c2017c32eef5c6d303157f}
+      \strng{editorbibnamehash}{bfb07867b83e7cc6b9240de083c0b803}
+      \strng{editornamehash}{bfb07867b83e7cc6b9240de083c0b803}
+      \strng{editorfullhash}{bfb07867b83e7cc6b9240de083c0b803}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The practice of lobbying in the interest of economic or social groups plays an important role in the policy making process of most economies. While no data is available at this stage to examine the success of lobbies in exerting influence on specific policy issues, we perform a first systematic multi-layer network analysis of a large lobby registry. Here we focus on the domains of finance and climate and we combine information on affiliation and client relations from the {EU} transparency register with information about shareholding and interlocking directorates of firms. We find that the network centrality of lobby organizations has no simple relation with their lobbying budget. Moreover, different layers of the multiplex network provide complementary information to characterize organizations’ potential influence. At the aggregate level, it appears that while the domains of finance and climate are separated on the layer of affiliation relations, they become intertwined when economic relations are considered. Because groups of interest differ not only in their budget and network centrality but also in terms of their internal cohesiveness, drawing a map of both connections across and within groups is a precondition to better understand the dynamics of influence on policy making and the forces at play.}
+      \field{day}{28}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{{PLOS} {ONE}}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{10}
+      \field{shortjournal}{{PLoS} {ONE}}
+      \field{title}{The Multiplex Network of {EU} Lobby Organizations}
+      \field{urlday}{13}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{volume}{11}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e0158062}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0158062
+      \endverb
+      \verb{file}
+      \verb Zeng and Battiston - 2016 - The Multiplex Network of EU Lobby Organizations.pdf:/home/azaiez/Zotero/storage/GP8JAZYU/Zeng and Battiston - 2016 - The Multiplex Network of EU Lobby Organizations.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.plos.org/10.1371/journal.pone.0158062
+      \endverb
+      \verb{url}
+      \verb https://dx.plos.org/10.1371/journal.pone.0158062
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

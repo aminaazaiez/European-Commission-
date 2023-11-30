@@ -1,0 +1,10 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Literature}{3}{0}{1}
+\beamer@sectionintoc {2}{Data and method}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Social context}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Data collection}{9}{0}{2}
+\beamer@sectionintoc {3}{Data analysis}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Hypergraph architecture}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Political participation}{15}{0}{3}
+\beamer@subsectionintoc {3}{3}{Centralities}{15}{0}{3}
+\beamer@subsectionintoc {3}{4}{Correlation with political participation }{19}{0}{3}
