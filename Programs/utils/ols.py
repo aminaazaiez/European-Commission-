@@ -106,7 +106,7 @@ def xy_heatmap_corr (df , col1, col2, **kwargs ):
     plt.show()
 
 
-data  = EU.get_companies()[[ 'Degree', 'Strength', 'Betweenness','EV_linear', 'EV_log exp', 'EV_max', 'Hypercoreness', 'TR Country','Members FTE',  'Assets','Fields of interest', 'Level of interest', 'NACE']].dropna().copy()
+data  = EC.get_companies()[[ 'Degree', 'Strength', 'Betweenness','EV_linear', 'EV_log exp', 'EV_max', 'Hypercoreness', 'TR Country','Members FTE',  'Assets','Fields of interest', 'Level of interest', 'NACE']].dropna().copy()
 
 #Split catagorial data
 
@@ -137,11 +137,11 @@ country_groups = {
     'Central and South America': ['MEXICO', 'BRAZIL'],
     'North Europe': ['NORWAY', 'FINLAND', 'DENMARK', 'SWEDEN',  'LITHUANIA', 'LATVIA', 'ESTONIA', 'UNITED KINGDOM', 'IRELAND'],
     'South Europe': ['ITALY', 'SPAIN', 'PORTUGAL', 'GREECE', 'CROATIA', 'CYPRUS', 'SLOVENIA', 'GIBRALTAR', 'MALTA'],
-    'East Europe': ['CZECH REPUBLIC', 'POLAND',   'ROMANIA', 'HUNGARY', 'BULGARIA', 'SLOVAKIA', 'KOSOVO', 'UKRAINE'],
+    'East Europe': ['CZECH REPUBLIC', 'POLAND',   'ROMANIA', 'HUNGARY', 'BULGARIA', 'SLOVAKIA', 'KOSOVO', 'UKRAINE', 'RUSSIA, FEDERATION OF'],
     'West Europe': ['AUSTRIA', 'GERMANY', 'SWITZERLAND', 'BELGIUM', 'LUXEMBOURG', 'FRANCE', 'NETHERLANDS'],
-    'East Asia': ['JAPAN', 'CHINA', 'HONG KONG', 'TAIWAN'],
+    'East Asia': ['JAPAN', 'CHINA', 'HONG KONG', 'TAIWAN', 'KOREA, REPUBLIC OF'],
     'South Asia' : ['INDIA'],
-    'Middle east' : ['UNITED ARAB EMIRATES'],
+    'Middle east' : ['UNITED ARAB EMIRATES', 'QATAR'],
     'Oeania' : [ 'SINGAPORE', 'AUSTRALIA','NEW ZEALAND'],
     'Other': ['SOUTH AFRICA', 'BERMUDA', 'GHANA', 'KAZAKHSTAN']
 }
@@ -195,12 +195,12 @@ category_to_remove= {'Strength': {'Country' : 'East Europe', 'Sector' :'H - Tran
 
 # Define variables for regression
 targets = ['Strength', 'EV_linear', 'Hypercoreness']
-variables = lobbying + financials + country + sector +level +field
+variables = lobbying + financials + country + sector +level
 basetable = data[variables + targets]
 
 basetable, h_sector = one_hot_encod(basetable, sector, 'C - Manufacturing')
 basetable, h_country = one_hot_encod(basetable, country, 'West Europe')
-variables =  lobbying + financials + h_country + h_sector +field +level
+variables =  lobbying + financials + h_country + h_sector +level
 
 
 #xy_heatmap_corr(basetable, field, h_sector)
@@ -347,7 +347,7 @@ def stepwise_selection(candidate_variables, target, basetable):
     while True:
         c = 0
         next_var = variables_to_add(current_variables, candidate_variables, target, basetable, threshold = teta_in)
-
+        print(next_var)
         if next_var ==[]:
             c+=1
         else :
@@ -355,6 +355,7 @@ def stepwise_selection(candidate_variables, target, basetable):
             for v in next_var:
                 candidate_variables.remove(v)
         next_var  = variables_to_remove(current_variables, target, basetable, threshold = teta_out)
+        print(next_var)
         if next_var == []:
             c+=1
         else:

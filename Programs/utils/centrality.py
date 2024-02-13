@@ -2,7 +2,7 @@ import hypernetx as hnx
 import networkx as nx
 from networkx.algorithms import bipartite
 import pandas as pd
-
+import xgi
 
 import numpy as np
 
@@ -10,36 +10,40 @@ from multiprocessing import Pool
 import itertools
 
 
-def Hnx_2_nxBipartite (H : hnx.Hypergraph) :
+def XGI_2_nxBipartite (H : hnx.Hypergraph) :
     B = nx.Graph()
-    # nodes = self._state_dict["labels"]["nodes"]
-    # edges = self._state_dict["labels"]["edges"]
-    B.add_nodes_from(H.edges(), bipartite='meeting')
-    B.add_nodes_from(H.nodes(), bipartite='entity')
-    weights = [ H.edges[e].weight for e in H.edges()]
-    B.add_weighted_edges_from([(v, e, w_e) for (e , w_e) in zip (H.edges() , weights ) for v in H.edges[e]])
-    return(B)
+
+    B.add_nodes_from(H.nodes, bipartite='entity')
+    B.add_nodes_from(H.edges , bipartite='meeting')
+    for node in H.nodes:
+        for edge in H.nodes.memberships(node):
+            B.add_edge(node, edge)
+
+    return B
 
 
 ## Strength
-def strength (H : hnx.Hypergraph() ):
-    B = Hnx_2_nxBipartite(H)
-    cent = bipartite.degrees(B ,bipartite.sets(B)[0], weight = 'weight')[0]
+def strength (H : xgi.Hypergraph() ):
+    cent = H.degree()
     return( pd.DataFrame({'Strength' : dict(cent).values()}, index = dict(cent).keys()) )
 
-def degree(H : hnx.Hypergraph()):
-    B = Hnx_2_nxBipartite(H)
-    cent =bipartite.degrees(B, bipartite.sets(B)[0])[0]
+def degree(H : xgi.Hypergraph()):
+    X =H.copy()
+    X.merge_duplicate_edges()
+    cent = X.degree()
     return( pd.DataFrame({'Degree' : dict(cent).values()}, index = dict(cent).keys()) )
 
-def cardinality(H : hnx.Hypergraph()):
-    B = Hnx_2_nxBipartite(H)
-    cent =bipartite.degrees(B, bipartite.sets(B)[0])[1]
-
+def cardinality(H : xgi.Hypergraph()):
+    cent = H.edges.size.asdict()
     return(pd.DataFrame({'Cardinality' : dict(cent).values()}, index = dict(cent).keys()) )
 
 
 
+## Closeness
+def closeness (H: xgi.Hypergraph):
+    B = Hnx_2_nxBipartite(H)
+    cent = bipartite.closeness_centrality(B ,bipartite.sets(B)[0])
+    return( pd.DataFrame({'Closeness' : dict(cent).values()}, index = dict(cent).keys()) )
 
 ##Eigenvector centrality
 def set_functions(mode):
@@ -77,51 +81,76 @@ def set_functions(mode):
 
 
 def eigenvector (H, mode = 'linear') :
-    maxiter = 100
-    tol = 1e-5
+    maxiter = 1000
+    tol = 1e-6
     f,g,psi,phi = set_functions(mode)
-    B, idx , column  = H.incidence_matrix(weights=False, index = True)
-    n,m = np.shape(B)
 
-    edge_weights = [H.edges[e].weight for e in H.edges()]
-    nodes_weights = [ 1 for agent in H.nodes()]
+    n = H.num_nodes
+    m = H.num_edges
+    x = np.ones(n)
+    y = np.ones(m)
 
-    W = np.diag(edge_weights, k=0)
-    N= np.diag(nodes_weights, k=0)
+    I, node_dict, edge_dict = xgi.incidence_matrix(H, index=True)
 
-    #x0 = np.ones((n,1))
-    #y0 = np.ones((m,1))
-    x0 = np.random.rand(n,1)
-    y0 = np.random.rand(m,1)
+    check = np.inf
 
-    for it in range(maxiter):
-        if it%10 == 0:
-            print(it)
+    for iter in range(maxiter):
 
-        u = np.sqrt(x0 * g(B @ W @ f(y0)))
-        v = np.sqrt(y0 * psi( np.transpose(B) @ N @ np.nan_to_num(phi(x0))))
+        u = np.sqrt(np.multiply(x, g(I @ f(y))))
+        v = np.sqrt(np.multiply(y, psi(I.T @ np.nan_to_num(phi(x)))))
 
-        x = u / np.linalg.norm(u)
-        y = v / np.linalg.norm(v)
+        new_x =  u / np.linalg.norm(u, 1)
+        new_y = v / np.linalg.norm(v, 1)
 
-
-        if np.linalg.norm(x - x0) + np.linalg.norm( y - y0) < tol :
-            print('under tolerance value satisfied')
-            x = np.reshape(x, n)
-            y = np.reshape(y,m)
-            return(pd.DataFrame({'EV_%s'%mode: x }, index = idx))
-
-        else :
-            x0 = np.copy(x)
-            y0 = np.copy(y)
-
-    print('under tolerance value not satisfied')
-
-    x = np.reshape(x, n)
-    y = np.reshape(y,m)
-    eigenvector_centrality = {idx[i] : x[i] for i in range(len(idx))}
-
-    return(pd.DataFrame({'EV_%s'%mode: x }, index = idx))
+        check = np.linalg.norm(new_x - x) + np.linalg.norm(new_y - y)
+        if check < tol:
+            break
+        x = new_x.copy()
+        y = new_y.copy()
+    else:
+        print("Iteration did not converge!")
+    cent =  {node_dict[n]: new_x[n] for n in node_dict}
+    cent.update({ edge_dict[e]: new_y[e] for e in edge_dict})
+    return(pd.DataFrame({'EV_%s'%mode: cent.values() }, index = cent.keys()))
+    # #
+    #
+    # B, idx , column  = xgi.incidence_matrix( H, index = True)
+    # n,m = np.shape(B)
+    #
+    #
+    # x0 = np.ones((n,1))
+    # y0 = np.ones((m,1))
+    # # x0 = np.random.rand(n,1)
+    # # y0 = np.random.rand(m,1)
+    #
+    # for it in range(maxiter):
+    #     if it%10 == 0:
+    #         print(it)
+    #
+    #     u = np.sqrt(x0 * g(B @ f(y0)))
+    #     v =np.sqrt( y0 * psi( np.transpose(B) @ np.nan_to_num(phi(x0))))
+    #
+    #     x = u / np.linalg.norm(u)
+    #     y = v / np.linalg.norm(v)
+    #
+    #
+    #     if np.linalg.norm(x - x0) + np.linalg.norm( y - y0) < tol :
+    #         print('under tolerance value satisfied')
+    #         x = np.reshape(x, n)
+    #         y = np.reshape(y,m)
+    #         return(pd.DataFrame({'EV_%s'%mode: x }, index = idx))
+    #
+    #     else :
+    #         x0 = np.copy(x)
+    #         y0 = np.copy(y)
+    #
+    # print('under tolerance value not satisfied')
+    #
+    # x = np.reshape(x, n)
+    # y = np.reshape(y,m)
+    # eigenvector_centrality = {idx[i] : x[i] for i in range(len(idx))}
+    #
+    # return(pd.DataFrame({'EV_%s'%mode: x }, index = idx))
 
 ## Betweenness Centrality
 
@@ -160,7 +189,7 @@ def betweenness_centrality_parallel_unipartite(B, processes=None):
     return bt_c
 
 def betweenness(H: hnx.Hypergraph):
-    B = Hnx_2_nxBipartite(H)
+    B = XGI_2_nxBipartite(H)
     nodes =  bipartite.sets(B)[1]
     top = set(nodes)
     bottom = set(B) - top
@@ -184,23 +213,39 @@ def betweenness(H: hnx.Hypergraph):
     for node in bottom:
         betweenness[node] /= bet_max_bot
 
-    return pd.DataFrame({'Betweenness' : dict(betweenness).values()}, index = dict(betweenness).keys()).loc[list(top)]
+    return pd.DataFrame({'Betweenness' : dict(betweenness).values()}, index = dict(betweenness).keys())
+
+## Hypercoreness
+
+def hypercoreness(core):
+    c_m = { node : {} for node in core[2][1][0]}
+    for m in core.keys():
+        k_max = max(core[m].keys())
+        for k in core[m].keys():
+            if k != k_max :
+                k_m_shell = core[m][k][0] - core[m][k+1][0]
+            else :
+                k_m_shell = core[m][k][0]
+
+            for node in k_m_shell:
+                c_m[node][m] = k/k_max
 
 
-##
-def closeness (H: hnx.Hypergraph):
-    B = Hnx_2_nxBipartite(H)
-    cent = bipartite.closeness_centrality(B ,bipartite.sets(B)[0])
-    return( pd.DataFrame({'Closeness' : dict(cent).values()}, index = dict(cent).keys()) )
+    R_i = {node : sum( [ c_m[node][m] for m in c_m[node].keys() ] ) for node in c_m.keys()}
+
+    cent = pd.DataFrame({'Hypercoreness' : R_i.values()}, index = R_i.keys())
+    return(cent)
+
 
 
 ## mettings' size attendence
-def MSA (H : hnx.Hypergraph):
+def MSA (H : xgi.Hypergraph):
     edge_size = {}
-    for node in H.nodes():
-        E_i = H.nodes.memberships[node]
-        edge_size[node] = sum ([  H.edges[e].weight * H.size (e) for e in E_i]) / sum([  H.edges[e].weight for e in E_i])
-    return(edge_size)
+    for node in H.nodes:
+        E_i = H.nodes.memberships(node)
+        edge_size[node] = sum ([ H.size (e) for e in E_i]) /len(E_i)
+
+    return( pd.DataFrame({'MSA' : dict(edge_size).values()}, index = dict(edge_size).keys()))
 
 ## Diversity of meetings
 from scipy.stats import entropy

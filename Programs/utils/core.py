@@ -4,9 +4,9 @@ import numpy as np
 import itertools
 
 
-def build_hypergraph(H: hnx.Hypergraph):
-    data = [H.edges[e] for e in H.edges]
-    X = xgi.Hypergraph(data) #build the hypergraph
+
+def build_hypergraph(H: xgi.Hypergraph):
+    X = H.copy()
     X.merge_duplicate_edges()
 
     return(X)
@@ -45,7 +45,7 @@ def restrict_k_hypergraph(X : xgi.Hypergraph, k: int, connected = False ):
 
 
 
-def core_decomposition(H : hnx.Hypergraph, connected = False, intimate = False) :
+def core_decomposition(H : xgi.Hypergraph, connected = False, intimate = False) :
     X = build_hypergraph(H)
     if intimate :
         M = range( max(X.edges.size.asnumpy()) + 1 , 1 , -1) # m = edge size
@@ -62,7 +62,7 @@ def core_decomposition(H : hnx.Hypergraph, connected = False, intimate = False) 
         k = 1
         X = build_hypergraph(H)
         while X.num_nodes > 0 : # loop for the k,m shell
-            print(m,k)
+            print(f'm ={m} , k = {k}')
 
             X , still_nodes_2_remove = restrict_m_hypergraph(X, m, connected, intimate)
             X , still_edges_2_remove = restrict_k_hypergraph(X, k, connected)

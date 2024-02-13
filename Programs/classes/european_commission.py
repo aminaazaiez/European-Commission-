@@ -5,15 +5,9 @@ import hypernetx as hnx
 import networkx as nx
 from collections import Counter
 from collections.abc import Sequence, Iterable
+import xgi
 
 date = '2019-12-01'
-mistyped =  {'Disinformation Index Ltd': 'The Global Disinformation Index', 'Fiat Chrysler Automobiles': 'Stellantis', 'Confederatia Patronala Concordia': 'Confederația Patronală CONCORDIA', 'PostNL Holding B.V.': 'PostNL Holding B.V>', 'Air France KLM': 'Air France-KLM', 'Open Finance Association Europe': 'Open Finance Association', 'Estonian Renewable Energy Association': 'Portuguese Renewable Energy Association', 'NV Nederlandse Spoorwegen': 'Nederlandse Spoorwegen', 'Fair Trade Advocacy Office': 'Stichting Fair Trade Advocacy Office', 'Tweeddale Advisors': 'Tweeddale Advisors Ltd', 'Electrolux Home Products': 'Electrolux Home Products Europe', 'Stowarzyszenie Rzeźników i Wędliniarzy RP': 'Stowarzyszenie Rzeźników i Wędliniarzy Rzeczypospolitej Polskiej', 'ORGANIZACIÓN NACIONAL DE CIEGOS ESPAÑOLES': 'ORGANIZACION NACIONAL DE CIEGOS DE ESPAÑA', 'POLSKI ZWIĄZEK HODOWCÓW I PRODUCENTÓW BYDŁA MIĘSNEGO': 'Polski Związek Hodowców i Producentów Bydła Mięsnego', 'Internet Corporation for Assigned Names and Numbers': 'The Internet Corporation for Assigned Names and Numbers', 'Bundesverband Güterkraftverkehr Logistik und Entsorgung (BGL) e. V.': 'Bundesverband Güterkraftverkehr Logistik und Entsorgung (BGL) e.V.', 'Ragn-Sells': 'Ragn Sells AS', 'Eesti Tööandjate Keskliit': 'EESTI TÖÖANDJATE KESKLIIT MTÜ', 'Oxfam-Solidarité / Oxfam-Solidariteit': 'Oxfam-en-Belgique / Oxfam-in-België', 'Atlantic Council of the United States, Inc.': 'Atlantic Council of the United States, Inc', 'Cboe Europe Limited': 'CboeEurope', 'Seas At Risk vzw': 'Seas At Risk', 'Institutional Limited Partners Association (ILPA)': 'Institutional Limited Partners Association'}
-
-manual_check = {'Compassion in World Farming Brussels' : 'Compassion in World Farming International' ,
-                'ASOCIACION AGRARIA JOVENES AGRICULTORES MALAGA' :'Asociación Agraria Jóvenes Agricultores',
-                'ClearVAT': 'eClear AG',
-                'Yleisradio Oy' : 'Nordvision'}
-
 
 def search_and_replace_tuple(tuple_value, replacement_dict):
     new_tuple = tuple(replacement_dict.get(element, element) for element in tuple_value)
@@ -28,21 +22,19 @@ def search_str_in_column_of_tuple(dataframe : pd.DataFrame, column_name : str, s
     return filtered_df
 
 
+
 def merge_iterable_of_tuples( l1 : Iterable , l2 : Iterable):
     return( [ tuple_1 + tuple_2 for tuple_1 , tuple_2 in zip ( l1 , l2) ] )
 
 
-def hyperedges2biartite( edges , edge_weights):
-    edge_name, node_name, weight = [] ,[], []
+def hyperedges2biartite( edges_id ,  edges ):
+    edge_name, node_name = [] ,[]
 
-    for i , (edge, edge_weight)  in enumerate( zip (edges , edge_weights)):
+    for i , edge  in zip( edges_id , edges ):
         for node in edge:
             edge_name.append(i)
             node_name.append(node)
-            weight.append(edge_weight)
-    return(pd.DataFrame( {'edge' : edge_name , 'node' : node_name, 'weight' : weight}))
-
-
+    return(pd.DataFrame( {'edge' : edge_name , 'node' : node_name}))
 
 
 def split_column(df : pd.DataFrame, column : str, sep :str =', ' ,  prefix : str = None):
@@ -51,7 +43,7 @@ def split_column(df : pd.DataFrame, column : str, sep :str =', ' ,  prefix : str
 
     for item in items:
         if prefix :
-            col_name = prefix + '_' + item
+            col_name = prefix + ' ' + item
         else :
             col_name = item
         # Initialize new columns with 0
@@ -60,108 +52,177 @@ def split_column(df : pd.DataFrame, column : str, sep :str =', ' ,  prefix : str
         # Use .str.contains() to set the values to 1 where applicable
         df.loc[ df[column].str.contains(item, case=False , regex = True) == True, col_name] = 1 # to deal with nan
 
+
     df.drop( column , axis = 1 , inplace = True)
+
+    #df = df.astype('int')
     return(df)
 
+
 def toy():
-    edges = [('A', 'B', 'C'), ('C', 'D', 'E', 'F'), ('B','E','F', 'G')]
-    weights = [3, 1,10]
+    edges = [('A', 'B', 'C'),('A', 'B', 'C'), ('C', 'D', 'E', 'F'), ('B','E','F', 'G')]
+    H = xgi.Hypergraph( edges )
 
-    df_bipartite = hyperedges2biartite(edges, weights)
-
-    hypergraph = hnx.Hypergraph( df_bipartite , edge_col = 'edge' , node_col = "node", cell_weight_col="weight",  sort=False)
-
-    # Add weights and strengths as attributes to edges and nodes
-    df =hypergraph.dataframe.groupby('edge')['weight'].first()
-    hypergraph.edge_props.update(df)
-    return(hypergraph)
+    return(H)
 
 
 class EuropeanCommission:
     def __init__(
         self,
-        meetings_path : str ,
+        data_path : str ,
         meetings : pd.DataFrame = pd.DataFrame(),
         entities : pd.DataFrame = pd.DataFrame(),
-        hypergraph : hnx.Hypergraph = hnx.Hypergraph(),
+        H : hnx.Hypergraph = hnx.Hypergraph(),
         ):
+        self.data_path = data_path
         self.meetings = meetings
         self.entities = entities
-        self.hypergraph = hypergraph
+        self.H = H
 
-        #Add commissioner and cabinet member schedule
-        for file in [meetings_path + 'commissioners.jsonl' ,  meetings_path + 'cabinet_members.jsonl', meetings_path + 'directorate_general.jsonl']:
-            data= pd.read_json( file, lines = True)
-            data = data[['EU Member', 'Date', 'Entities', 'Subjects']]
-            self._add_meetings(data)
 
-        #Add entities
-        eu_members = set(itertools.chain.from_iterable( self.meetings['EU Member'] ))
-        organizations = set(itertools.chain.from_iterable( self.meetings['Entities'] ))
+        # Load EC represenatives meetings
+        self.load_meetings()
 
-        self.entities = pd.concat([self.entities ,  pd.DataFrame( { 'Type' : ['EU Member' for _ in eu_members ] } , index = list(eu_members  )) ])
-        self.entities = pd.concat([self.entities ,  pd.DataFrame( {'Type' : ['Organization' for _ in organizations] } , index = list(organizations))  ] )
-        self.entities.index.rename('Name', inplace = True)
+        self.meetings.rename(columns = {
+                'Name of EC representative' : 'EC member',
+                'Date of meeting' : 'Date',
+                'Transparency register ID' : 'TR ID',
+                'Name of DG - full name' : 'Name of DG'}, inplace = True)
 
-        #Generate hypergraph
+        self.meetings['EC member'] = [tuple( EC.split(',') ) for EC in self.meetings['EC member']]
+        self.meetings['Title of EC representative'] = [tuple( EC.split(',') ) for EC in self.meetings['Title of EC representative']]
+
+        self.meetings['TR ID'] = [tuple( EC.split(',') ) for EC in self.meetings['TR ID']]
+
+        self.add_relative_commission()
+
+        # Create entities dataframe
+
+        self.create_entites_df()
+
+        # Generate hypergraph
         self.generate_hypergraph()
 
 
 
-    def _add_meetings(self,  data : pd.DataFrame):
-        data['EU Member'] = [tuple( data['EU Member'][i]) for i in range (len(data))]
-        data['Entities'] = [tuple( data['Entities'][i]) for i in range (len(data))]
-        data['Subjects'] = [tuple( data['Subjects'][i]) for i in range (len(data))]
-        self.meetings = pd.concat([self.meetings , data], ignore_index= True)
-        # search and replace specific organization that misstyped
-        self.meetings['Entities'] = self.meetings['Entities'].apply(lambda x : search_and_replace_tuple(x, mistyped))
-        self.meetings['Entities'] = self.meetings['Entities'].apply(lambda x : search_and_replace_tuple(x, manual_check))
+    def load_meetings(self):
 
-        # Delete data previous to the actual commission
-        self.meetings = self.meetings[self.meetings['Date']> date]
+        # Load cabinet meetings
+
+        file_name = 'Meetings of Commission representatives of the Von der Leyen Commission (2019-2024).xlsx'
+        columns = ['Name of cabinet', 'Name of EC representative', 'Title of EC representative', 'Transparency register ID', 'Name of interest representative', 'Date of meeting']
+        self.meetings = pd.read_excel(self.data_path + 'meetings/' + file_name, skiprows=[0], usecols=columns )
+
+
+        # Load DG meetings
+
+        file_name = 'Meetings of Directors-General of the European Commission.xlsx'
+        columns = ['Name of DG - full name', 'Name of EC representative', 'Title of EC representative', 'Transparency register ID', 'Name of interest representative','Date of meeting']
+        self.meetings = pd.concat([self.meetings , pd.read_excel(self.data_path + 'meetings/' + file_name, skiprows=[0], usecols=columns ) ] ,  ignore_index= True)
+
+        to_drop = ['Recovery and Resilience Task force', 'Regulatory Scrutiny Board' , 'Informatics', 'European Personnel Selection Office', 'Task Force for Relations with the United Kingdom']
+        idx = self.meetings.loc[self.meetings['Name of DG - full name'].isin(to_drop)].index
+        self.meetings.drop(index = idx, inplace  = True)
+
+        # Filter by date
+
+        self.meetings = self.meetings[self.meetings['Date of meeting'] > date]
+
+
+    def add_relative_commission(self):
+        # Add relative commission to cabinet
+        self.meetings.loc[self.meetings['Name of DG'].isna(), 'Relative commission'] = self.meetings['Name of cabinet'].str.extract( r'Cabinet of (Commissioner|Vice-President|High Representative|Executive Vice-President|President) ([^,]+)', expand=False)[1]
+
+        # Add relative commission to DG
+
+        data = pd.read_csv(self.data_path + 'DGs_relative_com.csv')
+        com_relative_DG = dict(zip(data['Name of DG'], data['Commissioner']))
+        self.meetings.loc[self.meetings['Name of cabinet'].isna(), 'Relative commission'] = self.meetings['Name of DG'].map(com_relative_DG)
+
+
+
+    def create_entites_df(self):
+        self.entities = pd.DataFrame()
+
+        ec_members = set(itertools.chain.from_iterable( self.meetings['EC member'] ))
+        organizations = set(itertools.chain.from_iterable( self.meetings['TR ID'] ))
+
+        self.entities = pd.concat([self.entities ,  pd.DataFrame( {'Type' : ['Organization' for _ in organizations] } , index = list(organizations))  ] )
+        self.entities = pd.concat([self.entities ,  pd.DataFrame( { 'Type' : [ 'EC member' for _ in ec_members ] } , index = list(ec_members  )) ])
+        self.entities.index.rename('Name', inplace = True)
+
 
 
 
     def generate_hypergraph(self):
-        hyperedges = merge_iterable_of_tuples ( self.meetings['EU Member'] ,  self.meetings['Entities'])
+        hyperedges = merge_iterable_of_tuples ( self.meetings['EC member'] ,  self.meetings['TR ID'])
         #agregate by sum
-        hyperedges = Counter(hyperedges)
-        df_bipartite = hyperedges2biartite(hyperedges.keys() , hyperedges.values())
-
-        self.hypergraph = hnx.Hypergraph( df_bipartite , edge_col = 'edge' , node_col = "node", cell_weight_col="weight",  sort=False)
+        hyperedges = {id_e : e for id_e , e in zip(self.meetings.index , hyperedges) }
 
         # Select the maximal connected subgraph
-        components = list( self.hypergraph.connected_components())
-        giant_component = max(components, key=len)
-        self.hypergraph = self.hypergraph.restrict_to_nodes(giant_component)
-        self.entities = self.entities.loc[list(giant_component)]
 
-        # Add weights and strengths as attributes to edges and nodes
-        df =self.hypergraph.dataframe.groupby('edge')['weight'].first()
-        self.hypergraph.edge_props.update(df)
+        self.H = xgi.Hypergraph( hyperedges )
+        self.H.remove_nodes_from(self.H.nodes - xgi.largest_connected_component(self.H))
+
+        self.entities = self.entities.loc[list(self.H.nodes)]
+        self.meetings = self.meetings.loc[list(self.H.edges)]
 
 
-        # df = self.hypergraph.dataframe.groupby('node')['weight'].sum().rename('weight')
-        # for i, node in enumerate (self.hypergraph.nodes ):
-        #     self.hypergraph.nodes[node].strength = df[node]
+
+    def collapse_entities(self, mapper):
+        ''' mapper : dict of nodes to collapse'''
+        def replace_element_in_tuple(x,mapper):
+            return( tuple(mapper.get(item, item) for item in x))
 
 
-    def add_data_to_entities_from(self, df : pd.DataFrame  , columns : Iterable[str] | str, right_on : str = 'Name', suffixes = (None, 'y')):
-        df.index = df[right_on]
+        self.meetings['TR ID'] = self.meetings['TR ID'].apply(lambda x : replace_element_in_tuple(x,mapper))
+        self.generate_hypergraph()
+
+
+
+
+    def add_data_to_entities_from(self, data : pd.DataFrame  , columns : Iterable[str] | str, right_on : str = 'Name', suffixes = (None, 'y')):
+        df  = data.copy()
+       # df.index = df[right_on]
+        idx = list( set(df.index ) & set (self.entities.index))
 
         # Add the values from df2 to df1
         if isinstance(columns , str):
-            self.entities[columns] = df[columns]
+            self.entities.loc[idx, columns] = df[columns]
 
         elif isinstance(columns , Iterable):
             for column in columns :
-                self.entities[column] =  df[column ]
+                self.entities.loc[ idx, column] =  df[column ]
 
+
+
+    def EC_members_info(self , reload = False):
+        ''' Returns a dataframe with columns Name, Title, Relative Commission for EC members'''
+        if reload :
+            df = pd.concat([pd.DataFrame({'Name': ec_member, 'Title': title, 'Commission': com}, index=[0]) for ec_members, titles, com in zip(self.meetings['EC member'],
+        self.meetings['Title of EC representative'], self.meetings['Relative commission'])
+                    for ec_member, title in zip(ec_members, titles)], ignore_index=True)
+            df.drop_duplicates(inplace = True)
+            df.to_csv(self.data_path + 'EC_members_info.csv', index = False )
+
+        else :
+            df = pd.read_csv(self.data_path + 'EC_members_info.csv')
+        return(df)
+
+
+
+
+    def get_orga(self):
+        return(self.entities[self.entities['Type'] == 'Organization'])
+
+    def get_companies(self):
+        return(self.entities[self.entities['Category of registration'] == 'Companies and groups'])
 
 
     def save_orga_names_batchs(self, columns : list, path_file : str):
-        df = self.entities[EU.entities['Type'] == 'Organization'][colmuns]
-        rows_per_file = 1000
+        df = self.get_companies()[columns]
+        df.index.rename('TR ID' , inplace = True)
+        rows_per_file = 100
 
         # Calculate the total number of files needed
         total_files = len(df) // rows_per_file + (len(df) % rows_per_file > 0)
@@ -171,11 +232,4 @@ class EuropeanCommission:
             start_idx = i * rows_per_file
             end_idx = start_idx + rows_per_file
             chunk_df = df.iloc[start_idx:end_idx]
-            chunk_df.to_csv(path_file + f'organization_names_{i + 1}.csv', index=False, sep = '\t')
-
-    def get_orga(self):
-        return(self.entities[self.entities['Type'] == 'Organization'])
-
-    def get_companies(self):
-        return(self.entities[self.entities['Category of registration'] == 'Companies and groups'])
-
+            chunk_df.to_csv(path_file + f'company_names_{i + 1}.csv',  sep = '\t', index = True)
